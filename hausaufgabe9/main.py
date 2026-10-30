@@ -9,3 +9,8 @@ app = FastAPI(title="Hogwarts – Hausaufgabe Tag 9")
 app.include_router(auth.router)
 app.include_router(summary.router)
 app.include_router(course_list.router)
+
+
+@app.get("/health")
+def read_health():
+    return {"status": "ok"}

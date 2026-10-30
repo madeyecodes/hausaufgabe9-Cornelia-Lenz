@@ -23,6 +23,7 @@ class Student(Base):
     house: Mapped[str | None] = mapped_column(String(20))
     school_year: Mapped[int] = mapped_column(TINYINT)
     bookings: Mapped[list["Booking"]] = relationship(back_populates="student")
+    owl_name: Mapped[str| None] = mapped_column(String(50))
    
 
 class Course(Base):
